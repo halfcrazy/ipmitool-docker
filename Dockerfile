@@ -1,5 +1,5 @@
-FROM alpine:latest
+FROM debian:trixie-slim
 
-RUN apk add --no-cache ipmitool
+RUN apt-get install -y -qq ipmitool
 
 ENTRYPOINT ["ipmitool"]
